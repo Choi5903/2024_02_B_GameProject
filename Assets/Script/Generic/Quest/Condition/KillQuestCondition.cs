@@ -33,7 +33,7 @@ namespace MyGame.QuestSystem
         
         public string GetDescription() => $"Defeat {requiredKills} {enemyType} ({currentKills}/{requiredKills})";   //퀘스트 조건 설명을 문자열로 변환
 
-        public void EnemyKilles(string enemyType)   //적 처치 시 호출되는 메서드
+        public void EnemyKilled(string enemyType)   //적 처치 시 호출되는 메서드
         {
             if(this.enemyType == enemyType)
             {

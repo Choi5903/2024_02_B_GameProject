@@ -25,9 +25,9 @@ namespace MyGame.QuestSystem
 
         public string GetDescription() => $"Defeat {requiredAmount} {itemId} ({currentAmount}/{requiredAmount})";       //퀘스트 조건 설명을 문자열로 변환
 
-        public void ItemCollection(string itemId)
+        public void ItemCollected(string itemId)
         {
-            if (this.itemId != itemId)
+            if (this.itemId == itemId)
             {
                 currentAmount++;
             }
