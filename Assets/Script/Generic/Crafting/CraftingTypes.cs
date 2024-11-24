@@ -5,7 +5,6 @@ using UnityEngine;
 namespace MyGame.CraftingSystem
 {
     //아이템 품질 등급
-
     public enum ItemQuality
     {
         Poor,
@@ -33,4 +32,5 @@ namespace MyGame.CraftingSystem
         bool isStackable { get; }
         int MaxStackSize { get; }
     }
+
 }
