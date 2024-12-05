@@ -1,14 +1,14 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour, IInteractable
 {
-    public string GetInteractPrompt() => "´ëÈ­ÇÏ±â";
-    public float GetInteractableDistance() => 2f;
+    public string GetInteractPrompt() => "ëŒ€í™”í•˜ê¸°";
+    public float GetInteractionDistance() => 2f;
     public bool CanInteract(GameObject player) => true;
     public void OnInteract(GameObject player)
     {
-        FloatingTextManager.Instance.ShowFloatingText("¾È³çÇÏ¼¼¿ä! ",transform.position);
+        FloatingTextManager.Instance.ShowFloatingText("ì•ˆë…•í•˜ì„¸ìš”! ",transform.position);
     }
 }

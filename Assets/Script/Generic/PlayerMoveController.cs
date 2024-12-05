@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PlayerMoveController : MonoBehaviour
 {
@@ -9,14 +8,15 @@ public class PlayerMoveController : MonoBehaviour
     [SerializeField] private CharacterController controller;
     private Vector3 MoveDirection;
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        MoveDirection = new Vector3(horizontal,0.0f, vertical).normalized;
+        MoveDirection = new Vector3(horizontal, 0.0f, vertical).normalized;
 
-        if(MoveDirection.magnitude > 0.1f)
+        if (MoveDirection.magnitude > 0.1f)
         {
             transform.forward = MoveDirection;
             controller.Move(MoveDirection * moveSpeed * Time.deltaTime);
